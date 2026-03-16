@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProdutoController;
+   
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,7 +41,11 @@ Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.ind
 Route::get('/pedido', [ClienteController::class, 'index'])->name('pedidos.index');
 Route::get('/fornecedor', [ClienteController::class, 'index'])->name('fornecedores.index');
 Route::get('/estoque', [ClienteController::class, 'index'])->name('estoque.index');
-Route::get('/produto', [ClienteController::class, 'index'])->name('produtos.index');
+
+
+
+// Rota para deletar um produto específico
+Route::delete('/produtos/{id}', [ProdutoController::class, 'destroy'])->name('produtos.destroy');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -49,6 +55,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+ 
+Route::resource('produtos', ProdutoController::class)->middleware(['auth']);
+
 });
 
 require __DIR__.'/auth.php';
