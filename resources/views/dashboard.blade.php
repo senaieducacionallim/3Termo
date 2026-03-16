@@ -1,17 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-<<<<<<< HEAD
             {{ __('Painel de Controle - Nossa Confecção') }}
-=======
             {{ __('Dashboard') }}
->>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-<<<<<<< HEAD
             
             <!-- Grid de Resumo -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -67,13 +63,11 @@
                 </div>
             </div>
 
-=======
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("Bem-Vindo!") }}
                 </div>
             </div>
->>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
         </div>
     </div>
 </x-app-layout>
