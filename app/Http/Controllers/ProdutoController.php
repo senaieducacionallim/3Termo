@@ -62,6 +62,7 @@ class ProdutoController extends Controller
             'nome'      => 'required|string|max:255',
             'preco'     => 'required|numeric',
             'categoria' => 'required|string',
+            'descricao' => 'required|string',
             'sku'       => 'required|string|unique:produtos,sku,' . $id,
         ]);
 

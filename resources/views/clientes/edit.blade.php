@@ -19,7 +19,7 @@
                             <input type="text" name="cpf" value="{{ $cliente->cpf }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
                         </div>
 
-                        <!-- Novo campo: E-mail -->
+             
                         <div>
                             <label class="block text-sm font-medium text-gray-700">E-mail</label>
                             <input type="email" name="email" value="{{ $cliente->email }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
@@ -30,7 +30,7 @@
                             <input type="text" name="telefone" value="{{ $cliente->telefone }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
                         </div>
 
-                        <!-- Novo campo: Endereço -->
+                        
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Endereço</label>
                             <input type="text" name="endereco" value="{{ $cliente->endereco }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">

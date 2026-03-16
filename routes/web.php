@@ -20,9 +20,12 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
 
 Route::get('/clientes/edit', [ClienteController::class, 'edit'])->name('clientes.edit');
+Route::get('/clientes/update', [ClienteController::class, 'update'])->name('clientes.update');
+Route::get('/clientes/destroy', [ClienteController::class, 'destroy'])->name('clientes.destroy');
 
 // Rota para RECEBER os dados e salvar (POST)
 Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+
 
 
 
@@ -31,9 +34,8 @@ Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.ind
 // Rota para mostrar o formulário
 Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
 // Rota para editar os dados
-Route::get('/clientes/edit', [ClienteController::class, 'edit'])->name('clientes.edit');
-Route::get('/clientes/update', [ClienteController::class, 'update'])->name('clientes.update');
-Route::get('/clientes/destroy', [ClienteController::class, 'destroy'])->name('clientes.destroy');
+// Route::get('/clientes/edit', [ClienteController::class, 'edit'])->name('clientes.edit');
+
 // Rota para RECEBER os dados e salvar (POST)
 Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
 Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');

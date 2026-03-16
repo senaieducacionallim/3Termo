@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cliente; // Certifique-se de que o import está aqui
+use App\Models\Cliente; 
 
 
 class ClienteController extends Controller
