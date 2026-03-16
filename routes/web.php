@@ -13,6 +13,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
+<<<<<<< HEAD
 
 // Rota para mostrar o formulário
 Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
@@ -25,6 +26,23 @@ Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.st
 
 
 Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
+=======
+// Rotas para estrutura de clientes para cadastro , edição e exclusão
+// Rota para mostrar o formulário
+Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
+// Rota para editar os dados
+Route::get('/clientes/edit', [ClienteController::class, 'edit'])->name('clientes.edit');
+Route::get('/clientes/update', [ClienteController::class, 'update'])->name('clientes.update');
+// Rota para RECEBER os dados e salvar (POST)
+Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+
+// Rotas Gerais
+Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
+Route::get('/pedido', [ClienteController::class, 'index'])->name('pedidos.index');
+Route::get('/fornecedor', [ClienteController::class, 'index'])->name('fornecedores.index');
+Route::get('/estoque', [ClienteController::class, 'index'])->name('estoque.index');
+Route::get('/produto', [ClienteController::class, 'index'])->name('produtos.index');
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -6,20 +6,63 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
+<<<<<<< HEAD
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
 
+=======
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo TS Confecções" class="block h-12 w-auto">
+                    </a>
+                </div>
+
+
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+<<<<<<< HEAD
           
             </div>
 
             
+=======
+
+                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('Clientes')">
+                        {{ __('Clientes') }}
+                    </x-nav-link>
+                </div>
+
+                   <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('pedidos.index')" :active="request()->routeIs('Pedidos')">
+                        {{ __('Pedidos') }}
+                    </x-nav-link>
+                </div>
+
+                   <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('fornecedores.index')" :active="request()->routeIs('Fornecedores')">
+                        {{ __('Fornecedores') }}
+                    </x-nav-link>
+                </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('estoque.index')" :active="request()->routeIs('Estoque')">
+                        {{ __('Estoque') }}
+                    </x-nav-link>
+                </div>
+
+                   <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('produtos.index')" :active="request()->routeIs('Produtos')">
+                        {{ __('Produtos') }}
+                    </x-nav-link>
+                </div>
+            </div>
+
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
@@ -37,7 +80,11 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
+<<<<<<< HEAD
                             {{ __('Profile') }}
+=======
+                            {{ __('Perfil') }}
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -47,7 +94,11 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
+<<<<<<< HEAD
                                 {{ __('Log Out') }}
+=======
+                                {{ __('Sair') }}
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -83,7 +134,11 @@
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
+<<<<<<< HEAD
                     {{ __('Profile') }}
+=======
+                    {{ __('Perfil') }}
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
@@ -93,7 +148,11 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
+<<<<<<< HEAD
                         {{ __('Log Out') }}
+=======
+                        {{ __('Sair') }}
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
                     </x-responsive-nav-link>
                 </form>
             </div>

@@ -22,6 +22,18 @@
                             <label class="block text-sm font-medium text-gray-700">Telefone</label>
                             <input type="text" name="telefone" value="{{ $cliente->telefone }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
                         </div>
+<<<<<<< HEAD
+=======
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="text" name="email" value="{{ $cliente->email }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Endereço</label>
+                            <input type="text" name="endereco" value="{{ $cliente->endereco }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+
+>>>>>>> 0198567210f7e40252ce38cc9dce97471a0d004c
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
