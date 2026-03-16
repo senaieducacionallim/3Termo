@@ -44,25 +44,26 @@ class ClienteController extends Controller
         return view('clientes.edit', compact('cliente'));
     }
 
-// Salva a alteração no banco
-public function update(Request $request, Cliente $cliente) 
-{
-    $request->validate([
-        'nome' => 'required|string|max:255',
-        'cpf' => 'required|string|unique:clientes,cpf,' . $cliente->id,
-        'email' => 'required|email|unique:clientes,email,' . $cliente->id,
-        'telefone' => 'required',
-    ]);
+    // Salva a alteração no banco
+    public function update(Request $request, Cliente $cliente) 
+    {
+        $request->validate([
+            'nome' => 'required|string|max:255',
+            'cpf' => 'required|string|unique:clientes,cpf,' . $cliente->id,
+            'email' => 'required|email|unique:clientes,email,' . $cliente->id,
+            'telefone' => 'required',
+            'endereco' => 'string',
+        ]);
 
-    $cliente->update($request->all());
-    return redirect()->route('clientes.index')->with('success', 'Cliente atualizado!');
-}
+        $cliente->update($request->all());
+        return redirect()->route('clientes.index')->with('success', 'Cliente atualizado!');
+    }
 
-// Exclui o cliente
-public function destroy(Cliente $cliente) 
-{
-    $cliente->delete();
-    return redirect()->route('clientes.index')->with('success', 'Cliente removido!');
-}
+    // Exclui o cliente
+    public function destroy(Cliente $cliente) 
+    {
+        $cliente->delete();
+        return redirect()->route('clientes.index')->with('success', 'Cliente removido!');
+    }
 
-}
+    }

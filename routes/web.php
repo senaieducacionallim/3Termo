@@ -19,12 +19,16 @@ Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clie
 // Rota para editar os dados
 Route::get('/clientes/edit', [ClienteController::class, 'edit'])->name('clientes.edit');
 Route::get('/clientes/update', [ClienteController::class, 'update'])->name('clientes.update');
+Route::get('/clientes/destroy', [ClienteController::class, 'destroy'])->name('clientes.destroy');
 // Rota para RECEBER os dados e salvar (POST)
 Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
 
 // Rotas Gerais
-Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
-Route::get('/pedido', [ClienteController::class, 'index'])->name('pedidos.index');
+
+Route::get('/pedidos', [ClienteController::class, 'index'])->name('pedidos.index');
+
+
 Route::get('/fornecedor', [ClienteController::class, 'index'])->name('fornecedores.index');
 Route::get('/estoque', [ClienteController::class, 'index'])->name('estoque.index');
 Route::get('/produto', [ClienteController::class, 'index'])->name('produtos.index');
