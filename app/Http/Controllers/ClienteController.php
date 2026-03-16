@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cliente; 
+use App\Models\Cliente; // Certifique-se de que o import está aqui
+
 
 class ClienteController extends Controller
 {
@@ -38,11 +39,11 @@ class ClienteController extends Controller
         // 3. Redireciona de volta para a lista com uma mensagem de sucesso
         return redirect()->route('clientes.index')->with('success', 'Cliente cadastrado com sucesso!');
     }
-        // Abre a tela de edição
-        public function edit(Cliente $cliente) 
-    {
-        return view('clientes.edit', compact('cliente'));
-    }
+    // Abre a tela de edição
+public function edit(Cliente $cliente) 
+{
+    return view('clientes.edit', compact('cliente'));
+}
 
     // Salva a alteração no banco
     public function update(Request $request, Cliente $cliente) 
